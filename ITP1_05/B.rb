@@ -7,7 +7,7 @@ while true do
     else
         for i in 0...nums[0] do
             for j in 0...nums[1] do
-                if j == 0 || j == nums[1] - 1 then
+                if i == 0 || i == nums[0] - 1 || j == 0 || j == nums[1] - 1 then
                     print "#"
                 else
                     print "."
