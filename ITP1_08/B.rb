@@ -1,14 +1,11 @@
-# 要修正
-
-nums = []
-
 while true do
     num = gets
-    if num == 0
+    if num.to_i == 0
         break
     end
     sum = 0
-    for i in num.length do
-        sum += num[i]
+    for i in 0...num.length do
+        sum += num[i].to_i
     end
+    puts sum
 end
