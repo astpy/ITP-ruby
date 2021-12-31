@@ -6,11 +6,15 @@ while true do
     sentence_input = gets
     # puts sentence_input
 
-    if sentence_input == "END_OF_TEXT"
+    # == だとうまくいかないけどinclude?だとうまくいく。よくわからん。
+    # puts sentence_input == END_OF_TEXT"
+    # puts sentence_input.include?"END_OF_TEXT"
+
+    if sentence_input.include?"END_OF_TEXT"
         break
-    else
-        sentence += ' ' + sentence_input
     end
+
+    sentence += ' ' + sentence_input
 
     # puts sentence
 
@@ -21,7 +25,8 @@ sentence_array = sentence.split
 count = 0
 
 for word in sentence_array do
-    if word.downcase == search_word
+    ## 改行コードの削除
+    if word.downcase.chomp == search_word.chomp
         count += 1
     end
 end
