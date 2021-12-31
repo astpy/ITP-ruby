@@ -1,12 +1,19 @@
-i = 0
-sum = 0
-
 while true do
-    if i > 10
+
+    str = gets.chomp
+
+    if str == '-'
         break
     end
-    sum += i
-    i += 1
-end
 
-puts sum
+    n = gets.to_i
+
+    for i in 0...n do
+        h = gets.to_i
+        tmp = str.slice!(0...h)
+        str += tmp
+    end
+
+    puts str
+
+end
